@@ -11,11 +11,13 @@ app.get("/", tokenValidation.validateToken, (request, response) => {
 
     modelData.quidax_books.findAll({
         where: {
-            id: request.query.id
-        }
+            featured: request.query.featured
+        },
+        limit: 20,
+        OffSet: 0
     }).then(result => {
         return response.send(result);
-    })
+    });
 });
 
 module.exports = app;

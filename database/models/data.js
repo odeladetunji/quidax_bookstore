@@ -43,6 +43,16 @@ const quidax_books = sequelize.define('quidax_books', {
         type: DataTypes.BIGINT,
         allowNull: false
     },
+    featured: {
+        field: 'featured',
+        type: DataTypes.BOOLEAN,
+        allowNull: false
+    },
+    featured_count: {
+        field: 'featured_count',
+        type: DataTypes.BIGINT,
+        allowNull: false
+    },
 });
 
 const quidax_book_tags = sequelize.define('quidax_book_tags', {

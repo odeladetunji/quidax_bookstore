@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express.Router();
-const modelData = require('../database/model/data');
+const modelData = require('../database/models/data');
 const validation = require('../validation/emailAndPassword');
 const tokenValidation = require('../validation/validateToken');
 
