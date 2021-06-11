@@ -18,6 +18,6 @@ app.get("/", tokenValidation.validateToken, (request, response) => {
     }).then(result => {
         return response.send(result);
     });
-});
+}); 
 
 module.exports = app;
