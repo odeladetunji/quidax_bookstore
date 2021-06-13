@@ -17,10 +17,10 @@ const updateShoppingCart = require('./routes/update_shopping_cart');
 const deleteABook = require('./routes/delete_a_book');
 const deleteABookDetails = require('./routes/delete_book_details');
 const deleteAShoppingCart = require('./routes/delete_shopping_cart');
+const rateABook = require('./routes/rate_a_book');
+const averageRatings = require('./routes/average_rating');
 
 const { Sequelize } = require('sequelize');
-const { create } = require('domain');
-const { request } = require('express');
 const sequelize = new Sequelize('postgres://postgres:root@localhost:5432/postgres');
 
 app.use(bodyParser.urlencoded({ extended: false })); // urlencoded form parser
@@ -42,6 +42,8 @@ app.use('/fetch_featured_books', fetchFeaturedBooks);
 app.use('/delete_a_book', deleteABook);
 app.use('/delete_book_details', deleteABookDetails);
 app.use('/delete_shopping_cart', deleteAShoppingCart);
+app.use('/rate_a_book', rateABook);
+app.use('/average_ratings', averageRatings);
 
 server.listen(9000, function(){
 	console.log('Shape and Area Api');

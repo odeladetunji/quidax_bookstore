@@ -128,8 +128,8 @@ const quidax_books_ratings = sequelize.define('quidax_books_ratings', {
         type: DataTypes.BIGINT,
         allowNull: false
     },
-    create_date: {
-        field: 'create_date',
+    created_date: {
+        field: 'created_date',
         type: DataTypes.DATE,
         allowNull: false,
     },
@@ -148,12 +148,18 @@ const quidax_books_ratings = sequelize.define('quidax_books_ratings', {
         type: DataTypes.DATE,
         allowNull: false,
     },
-    mimeType: {
+    mime_type: {
         field: 'mime_type',
         type: DataTypes.BLOB,
         allowNull: false
     },
-});
+},
+{
+   freezeTableName: true, // Model tableName will be the same as the model name
+   timestamps: false,
+   tableName: 'quidax_books_ratings',
+   underscored: false
+ });
 
 
 const quidax_books_shopping_cart = sequelize.define('quidax_books_shopping_cart', {
@@ -421,6 +427,3 @@ module.exports = {quidax_books,
 // }
 
 // testDb();
-
-
-
