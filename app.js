@@ -9,7 +9,14 @@ const createShoppingCart = require('./routes/create_shopping_cart');
 const fetchAllBooks = require('./routes/fetch_all_books');
 const fetchABooksDetails = require('./routes/fetch_a_book_details');
 const fetchABook = require('./routes/fetch_a_book');
+const fetchFeaturedBooks = require('./routes/fetch_featured_books');
 const fetchShoppingCart = require('./routes/fetch_shopping_cart');
+const updateABook = require('./routes/update_a_book');
+const updateABookDetails = require('./routes/update_book_details');
+const updateShoppingCart = require('./routes/update_shopping_cart');
+const deleteABook = require('./routes/delete_a_book');
+const deleteABookDetails = require('./routes/delete_book_details');
+const deleteAShoppingCart = require('./routes/delete_shopping_cart');
 
 const { Sequelize } = require('sequelize');
 const { create } = require('domain');
@@ -28,6 +35,13 @@ app.use('/fetch_all_books', fetchAllBooks);
 app.use('/fetch_a_book_details', fetchABooksDetails);
 app.use('/fetch_a_book', fetchABook);
 app.use('/fetch_shopping_cart', fetchShoppingCart);
+app.use('/update_a_book', updateABook);
+app.use('/update_book_details', updateABookDetails);
+app.use('/update_shopping_cart', updateShoppingCart);
+app.use('/fetch_featured_books', fetchFeaturedBooks);
+app.use('/delete_a_book', deleteABook);
+app.use('/delete_book_details', deleteABookDetails);
+app.use('/delete_shopping_cart', deleteAShoppingCart);
 
 server.listen(9000, function(){
 	console.log('Shape and Area Api');

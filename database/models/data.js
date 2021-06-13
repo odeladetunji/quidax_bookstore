@@ -33,11 +33,11 @@ const quidax_books = sequelize.define('quidax_books', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    // lastactivity_date: {
-    //     field: 'lastactivity_date',
-    //     type: DataTypes.DATE,
-    //     allowNull: false,
-    // },
+    deleted: {
+        field: 'deleted',
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+    },
     price: {
         field: 'price',
         type: DataTypes.BIGINT,

@@ -6,6 +6,9 @@ const tokenValidation = require('../validation/validateToken');
 app.get("/", tokenValidation.validateToken, (request, response) => {
 
     modelData.quidax_books.findAll({
+        where: {
+            deleted: false
+        },
         limit: 20,
         OffSet: 0
     }).then(result => {
