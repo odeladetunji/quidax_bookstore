@@ -1,2 +1,11 @@
 # quidax_bookstore
-An online bookstore (Ecommerce)
+Quidax online bookstore (Ecommerce)
+
+#Technology
+Nodejs
+Express
+GraphQL
+PostGresql
+Sequelize
+
+#How to initialize the project
