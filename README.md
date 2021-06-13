@@ -12,9 +12,16 @@ Quidax online bookstore (Ecommerce)
 ```
 
 ## Please note
+
+
+```
+
 > the .env file was not added to git, 
 > Its needed for this project to run locally.
-> I will provide it upon request
+> I will provide it upon request.
+
+  
+```
 
 ## How to initialize the project
 
