@@ -16,7 +16,6 @@ app.post("/", validation.validateToken, (request, response) => {
             book_id: request.body.book_id,
             ratings: request.body.ratings,
           }).then(resp => {
-            console.log(resp)
               responsePayload['body'] = {}
               responsePayload['message'] = 'Book Rated Successfully';
               responsePayload['body'] = resp;
@@ -36,7 +35,7 @@ app.post("/", validation.validateToken, (request, response) => {
               user_uuid: request.body.user_uuid
             }
         }).then(rating => {
-            if(rating){
+            if(rating.length != 0){
                 rating.lastactivity_date = new Date();
                 rating.ratings = request.body.ratings
                 //updating rating

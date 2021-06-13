@@ -17,10 +17,8 @@ app.post("/", tokenValidation.validateToken, (request, response) => {
            avarageRating = avarageRating + result[i]['ratings'];
        }
        avarageRating = avarageRating / result.length;
-    //    console.log(avarageRating + "ppppp" + result.length)
        let responsePayload = {}
        responsePayload['message'] = 'Average Ratings';
-    //    console.log(avarageRating)
        responsePayload['body'] = {}
        responsePayload['body']['average_rating'] = avarageRating;
        responsePayload['body']['book_id'] = result.book_id;

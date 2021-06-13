@@ -19,6 +19,8 @@ const deleteABookDetails = require('./routes/delete_book_details');
 const deleteAShoppingCart = require('./routes/delete_shopping_cart');
 const rateABook = require('./routes/rate_a_book');
 const averageRatings = require('./routes/average_rating');
+const removeALike = require('./routes/remove_like')
+const addALike = require('./routes/add_like')
 
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('postgres://postgres:root@localhost:5432/postgres');
@@ -44,9 +46,11 @@ app.use('/delete_book_details', deleteABookDetails);
 app.use('/delete_shopping_cart', deleteAShoppingCart);
 app.use('/rate_a_book', rateABook);
 app.use('/average_ratings', averageRatings);
+app.use('/remove_a_like', removeALike);
+app.use('/add_a_like', addALike);
 
 server.listen(9000, function(){
-	console.log('Shape and Area Api');
+	console.log('Quidax Api');
 });
 
 async function testDb(){

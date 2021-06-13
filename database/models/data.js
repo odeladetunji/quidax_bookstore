@@ -225,7 +225,7 @@ const quidax_book_likes = sequelize.define('quidax_book_likes', {
         allowNull: false
     },
     user_uuid: {
-        field: 'user_name',
+        field: 'user_uuid',
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -233,9 +233,19 @@ const quidax_book_likes = sequelize.define('quidax_book_likes', {
         field: 'likes',
         type: DataTypes.INTEGER,
         allowNull: true
+    },
+    deleted: {
+        field: 'deleted',
+        type: DataTypes.BOOLEAN,
+        allowNull: true
     }
     
-});
+},{
+    freezeTableName: true, // Model tableName will be the same as the model name
+    timestamps: false,
+    tableName: 'quidax_book_likes',
+    underscored: false
+    });
 
 const quidax_books_details = sequelize.define('quidax_books_details', {
     id: {
