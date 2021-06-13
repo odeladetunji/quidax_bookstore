@@ -22,7 +22,6 @@ app.put("/", validation.validateToken, (request, response) => {
             created_date: request.body.create_date,
             created_by: request.body.created_by,
             copies_sold: request.body.copies_sold,
-            book_id: request.body.book_id,
             author: request.body.author
         }).then(result => {
             let responsePayload = {}; 

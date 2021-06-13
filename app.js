@@ -19,8 +19,12 @@ const deleteABookDetails = require('./routes/delete_book_details');
 const deleteAShoppingCart = require('./routes/delete_shopping_cart');
 const rateABook = require('./routes/rate_a_book');
 const averageRatings = require('./routes/average_rating');
-const removeALike = require('./routes/remove_like')
-const addALike = require('./routes/add_like')
+const removeALike = require('./routes/remove_like');
+const addALike = require('./routes/add_like');
+const createTags = require('./routes/create_tags');
+const fetchTags = require('./routes/fetch_tags');
+const deleteTags = require('./routes/delete_tags');
+const updateTags = require('./routes/update_tag');
 
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('postgres://postgres:root@localhost:5432/postgres');
@@ -48,6 +52,10 @@ app.use('/rate_a_book', rateABook);
 app.use('/average_ratings', averageRatings);
 app.use('/remove_a_like', removeALike);
 app.use('/add_a_like', addALike);
+app.use('/create_tags', createTags);
+app.use('/update_tags', updateTags);
+app.use('/delete_tags', deleteTags);
+app.use('/fetch_tags', fetchTags);
 
 server.listen(9000, function(){
 	console.log('Quidax Api');

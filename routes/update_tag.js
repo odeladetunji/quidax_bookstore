@@ -6,25 +6,18 @@ const validation = require('../validation/validateToken');
 app.put("/", validation.validateToken, (request, response) => {
     
 
-    modelData.quidax_books.findOne({
+    modelData.quidax_book_tags.findOne({
         where: {
             id: request.body.id,
+            book_id: request.body.book_id
         }
     }).then(resp => {
         resp.update({
-            mime_type: request.body.mime_type,
-            book_picture: request.body.book_picture,
-            created_date: request.body.create_date,
-            created_by: request.body.created_by,
-            lastactivity_by: request.body.lastactivity_by,
-            lastactivity_date: request.body.lastactivity_date,
-            price: request.body.price, 
-            featured: request.body.featured,
-            featured_count: request.body.featured_count
+            tag: request.body.tags,
         }).then(result => {
             let responsePayload = {}; 
             responsePayload['body'] = {}
-            responsePayload['message'] = 'Book Successfully Updated';
+            responsePayload['message'] = 'Tags Successfully Updated';
             responsePayload['body'] = result;
 
             return response.send(responsePayload);
@@ -35,7 +28,7 @@ app.put("/", validation.validateToken, (request, response) => {
         });
     }, (errMsg) => {
         console.log(errMsg)
-        return response.status(400).json({ errors: "book with this id not found"});
+        return response.status(400).json({ errors: "Tag with this id not found"});
     });
     
 

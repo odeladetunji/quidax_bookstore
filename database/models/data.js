@@ -82,9 +82,19 @@ const quidax_book_tags = sequelize.define('quidax_book_tags', {
         field: 'user_uuid',
         type: DataTypes.STRING,
         allowNull: false
+    },
+    deleted: {
+        field: 'deleted',
+        type: DataTypes.BOOLEAN,
+        allowNull: false
     }
     
-});
+}, {
+    freezeTableName: true, // Model tableName will be the same as the model name
+    timestamps: false,
+    tableName: 'quidax_book_tags',
+    underscored: false
+  });
 
 const quidax_books_users = sequelize.define("quidax_books_users", {
     id: {
