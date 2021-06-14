@@ -3,6 +3,7 @@ Quidax online bookstore (Ecommerce)
 
 #### Technology
 ```
+
    Nodejs
    Express
    GraphQL
@@ -11,7 +12,19 @@ Quidax online bookstore (Ecommerce)
   
 ```
 
-#### How to initialize the project
+## Please note
+
+
+```
+
+> the .env file was not added to git, 
+> Its needed for this project to run locally.
+> I will provide it upon request.
+
+  
+```
+
+## How to initialize the project
 
 ```
 
@@ -37,7 +50,7 @@ Quidax online bookstore (Ecommerce)
   
 ```
 
-#### How to test the various api
+## How to test the various api
 
 ```
 
@@ -52,11 +65,11 @@ Quidax online bookstore (Ecommerce)
 ```
 
 
-#### Object Relational Mapping Using ORM
+## Object Relational Mapping Using ORM
 
-###### Sequelize was used to handle ORM, in other to avoid writing sql code up and down in the code, I believe sql should be written only when ORM cannot handle the query. 
+#### Sequelize was used to handle ORM, in other to avoid writing sql code up and down in the code, I believe sql should be written only when ORM cannot handle the query. 
 
-###### An example of the schema for quidax_book_tags table is shown below. Visualizing it the schema below gives you an idea of what that table looks like
+#### An example of the schema for quidax_book_tags table is shown below. Visualizing it the schema below gives you an idea of what that table looks like
 
 ```
     const quidax_book_tags = sequelize.define('quidax_book_tags', {
