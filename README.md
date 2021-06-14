@@ -108,3 +108,22 @@ Quidax online bookstore (Ecommerce)
   });
 
 ```
+
+## Achitectural and Database Daigrame.
+
+```
+   
+   Please check the file named quidax_achi_diagrame
+   
+   
+```
+
+
+## Api Collection.
+
+```
+   
+   Please check the file named Quidax Api.postman_collection.json
+   
+   
+```
