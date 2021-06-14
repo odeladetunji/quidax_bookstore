@@ -114,6 +114,7 @@ Quidax online bookstore (Ecommerce)
 ```
    
    Please check the file named quidax_achi_diagrame
+   Its a pdf file containing the diagrams
    
    
 ```
