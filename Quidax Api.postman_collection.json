@@ -1,0 +1,847 @@
+{
+	"info": {
+		"_postman_id": "c8297a2d-85a1-4800-a45e-eed348ed49d5",
+		"name": "Quidax Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FetchToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/fetchtoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetchtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create A Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book\": {\n            \"mime_type\": \"jpeg\",\n            \"book_picture\": \"\",\n            \"create_date\": \"2021-06-12\",\n            \"created_by\": \"Olatunji Odelade\",\n            \"lastactivity_by\": \"Olatunji Odelade\",\n            \"lastactivity_date\": \"2021-06-12\",\n            \"price\": 34232,\n            \"featured\": true,\n            \"deleted\": false,\n            \"featured_count\": 0\n    },\n    \"book_details\": {\n            \"updated_by\": \"Olatunji Odelade\",\n            \"deleted\": false,\n            \"release_date\": \"2021-06-12\",\n            \"summary\": \"Ikemefuna is Alive\",\n            \"title\": \"money making machine\",\n            \"publisher\": \"Olatunji Odelade\",\n            \"genre\": \"book store\",\n            \"book_title\": \"Ikemefuna\",\n            \"create_date\": \"2021-06-12\",\n            \"image_id\": null,\n            \"created_by\": \"Elen Johnson\",\n            \"copies_sold\": 13244,\n            \"book_id\": null,\n            \"author\": \"Olatunji Odelade\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/create_a_book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"create_a_book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shopping Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 9,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/create_a_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"create_a_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"image_id\": null,\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 9,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/create_a_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"create_a_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate a Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mime_type\": \"jpeg\",\n    \"user_picture\": \"blob\",\n    \"user_uuid\": \"fwerwe3\",\n    \"image_id\": null,\n    \"book_id\": 2,\n    \"ratings\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/rate_a_book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"rate_a_book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Average Ratings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/average_ratings?book_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"average_ratings"
+					],
+					"query": [
+						{
+							"key": "book_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/fetch_all_books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetch_all_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Futured Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/fetch_featured_books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetch_featured_books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a Books Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 9,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/create_a_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"create_a_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch A Picture",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/images/popular.png",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"images",
+						"popular.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 9,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/fetch_a_book?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetch_a_book"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a Shopping Cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/fetch_shopping_cart?user_uuid=iugiuy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"fetch_shopping_cart"
+					],
+					"query": [
+						{
+							"key": "user_uuid",
+							"value": "iugiuy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 8,\n    \"mime_type\": \"jpeg\",\n    \"book_picture\": \"pix\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Olatunji Odelade\",\n    \"lastactivity_by\": \"Vincent\",\n    \"lastactivity_date\": \"2021-06-12\",\n    \"price\": 34232,\n    \"featured\": false,\n    \"featured_count\": 0\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/update_a_book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"update_a_book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Book Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 2,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/update_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"update_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update shopping Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"updated_by\": \"Olatunji Odelade\",\n    \"deleted\": false,\n    \"release_date\": \"2021-06-12\",\n    \"summary\": \"Ikemefuna\",\n    \"title\": \"money making machine\",\n    \"publisher\": \"Olatunji Odelade\",\n    \"genre\": \"book store\",\n    \"book_title\": \"Ikemefuna\",\n    \"create_date\": \"2021-06-12\",\n    \"created_by\": \"Elen Johnson\",\n    \"copies_sold\": 13244,\n    \"book_id\": 2,\n    \"author\": \"Olatunji Odelade\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/update_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"update_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"deleted\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/delete_a_book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"delete_a_book"
+					],
+					"query": [
+						{
+							"key": "deleted",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_uuid\": \"fwerwe83\",\n    \"book_id\": 2,\n    \"likes\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/add_a_like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"add_a_like"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Like",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/remove_a_like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"remove_a_like"
+					],
+					"query": [
+						{
+							"key": "deleted",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Shopping Cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"deleted\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/delete_shopping_cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"delete_shopping_cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"deleted\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/delete_book_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"delete_book_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload A File",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.NTMyMjY1YzczODgwYTdkNzE3YzNmMzE3Y2E5NDY4NzA1ZjFkYzI2YQ.Pl7DVac7a05n21Dq5ajYgqTOUPzhnkW3g0wEW167Vwg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "book_image",
+							"type": "file",
+							"src": "/Users/odeladetunji/Desktop/Screenshot.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/upload_image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"upload_image"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -4,7 +4,6 @@ const modelData = require('../database/models/data');
 const validation = require('../validation/validateToken');
 
 app.post("/", validation.validateToken, (request, response) => {
-    
     function create_a_book(){
         modelData.quidax_books.create({
             mime_type: request.body.book.mime_type,
@@ -13,6 +12,7 @@ app.post("/", validation.validateToken, (request, response) => {
             created_by: request.body.book.created_by,
             lastactivity_by: request.body.book.lastactivity_by,
             lastactivity_date: request.body.book.lastactivity_date,
+            deleted: request.body.book.deleted,
             price: request.body.book.price, 
             featured: request.body.book.featured,
             featured_count: request.body.book.featured_count

@@ -1,7 +1,10 @@
+const express = require('express');
+var fs = require('fs');
 const app = require('express')();
 const server = require('http').Server(app);
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path');
 const fetchToken = require('./routes/fetchToken');
 const createABook = require('./routes/create_a_book');
 const createABookDetails = require('./routes/create_book_details');
@@ -25,10 +28,13 @@ const createTags = require('./routes/create_tags');
 const fetchTags = require('./routes/fetch_tags');
 const deleteTags = require('./routes/delete_tags');
 const updateTags = require('./routes/update_tag');
+const uploadImage = require('./routes/upload_image');
 
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('postgres://postgres:root@localhost:5432/postgres');
 
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false })); // urlencoded form parser
 app.use(bodyParser.json())  // json parser
 app.use(cors());
@@ -56,6 +62,65 @@ app.use('/create_tags', createTags);
 app.use('/update_tags', updateTags);
 app.use('/delete_tags', deleteTags);
 app.use('/fetch_tags', fetchTags);
+app.use('/upload_image', uploadImage);
+
+
+let dir = path.join(__dirname, 'public');
+
+let mime = {
+    html: 'text/html',
+    txt: 'text/plain',
+    css: 'text/css',
+    gif: 'image/gif',
+    jpg: 'image/jpeg',
+    png: 'image/png',
+    svg: 'image/svg+xml',
+    js: 'application/javascript'
+};
+
+// app.get('*', function (req, res) {
+//     let file = path.join(dir, req.path.replace(/\/$/, '/index.html'));
+//     if (file.indexOf(dir + path.sep) !== 0) {
+//         return res.status(403).end('Forbidden');
+//     }
+//     let type = mime[path.extname(file).slice(1)] || 'text/plain';
+//     let s = fs.createReadStream(file);
+//     s.on('open', function () {
+//         res.set('Content-Type', type);
+//         s.pipe(res);
+//     });
+//     s.on('error', function () {
+//         res.set('Content-Type', 'text/plain');
+//         res.status(404).end('Not found');
+//     });
+// });
+
+app.use('*', function(req, res) {
+  var reqpath = req.url.toString().split('?')[0];
+  if (req.method !== 'GET') {
+      res.statusCode = 501;
+      res.setHeader('Content-Type', 'text/plain');
+      return res.end('Method not implemented');
+  }
+  var file = path.join(dir, reqpath.replace(/\/$/, '/index.html'));
+  if (file.indexOf(dir + path.sep) !== 0) {
+      res.statusCode = 403;
+      res.setHeader('Content-Type', 'text/plain');
+      return res.end('Forbidden');
+  }
+  var type = mime[path.extname(file).slice(1)] || 'text/plain';
+  var s = fs.createReadStream(file);
+  s.on('open', function () {
+      res.setHeader('Content-Type', type);
+      s.pipe(res);
+  });
+  s.on('error', function () {
+      res.setHeader('Content-Type', 'text/plain');
+      res.statusCode = 404;
+      res.end('Not found');
+  });
+});
+
 
 server.listen(9000, function(){
 	console.log('Quidax Api');
@@ -64,7 +129,7 @@ server.listen(9000, function(){
 async function testDb(){
 	try {
 		await sequelize.authenticate();
-		console.log('Connection has been established successfully.');
+		console.log('Database Connection has been established successfully.');
 	  } catch (error) {
 		console.error('Unable to connect to the database:', error);
 	  }

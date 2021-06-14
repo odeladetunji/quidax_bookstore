@@ -13,6 +13,11 @@ const quidax_books = sequelize.define('quidax_books', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    image_id: {
+        field: 'image_id',
+        type: DataTypes.BIGINT,
+        allowNull: true,
+    },
     book_picture: {
         field: 'book_picture',
         type: DataTypes.STRING,
@@ -121,6 +126,27 @@ const quidax_books_users = sequelize.define("quidax_books_users", {
     underscored: false
   });
 
+const quidax_images = sequelize.define("quidax_images", {
+    id: {
+        field: 'id',
+        type: DataTypes.BIGINT,
+        primaryKey: true,
+        autoIncrement: true
+    }, 
+    image_name: {
+        field: 'image_name',
+        type: DataTypes.STRING,
+        allowNull: true
+    }
+    
+  }, {
+    freezeTableName: true, // Model tableName will be the same as the model name
+    timestamps: false,
+    tableName: 'quidax_images',
+    underscored: false
+  });
+
+
 const quidax_books_ratings = sequelize.define('quidax_books_ratings', {
     id: {
         field: 'id',
@@ -152,6 +178,11 @@ const quidax_books_ratings = sequelize.define('quidax_books_ratings', {
         field: 'user_picture',
         type: DataTypes.BLOB,
         allowNull: false,
+    },
+    image_id: {
+        field: 'image_id',
+        type: DataTypes.BIGINT,
+        allowNull: true,
     },
     lastactivity_date: {
         field: 'lastactivity_date',
@@ -264,6 +295,11 @@ const quidax_books_details = sequelize.define('quidax_books_details', {
         primaryKey: true,
         autoIncrement: true
     },
+    image_id: {
+        field: 'image_id',
+        type: DataTypes.BIGINT,
+        allowNull: true,
+    },
     author: {
         field: 'author',
         type: DataTypes.STRING,
@@ -356,7 +392,8 @@ module.exports = {quidax_books,
                   quidax_books_users,
                   quidax_books_shopping_cart,
                   quidax_books_details,
-                  quidax_book_likes
+                  quidax_book_likes,
+                  quidax_images
                 }
 // const users = sequelize.define('users', {
 //     id: {
